@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>VUE基礎</title>
+<style>
+    /* Noto Sans font setting */
+@font-face {font-family: 'Noto Sans CJK TC Regular';font-style: normal;font-weight: 400;src: local('Noto Sans CJK TC Regular')}
+@font-face {font-family: 'Noto Sans CJK TC Medium';font-style: normal;font-weight: 500;src: local('Noto Sans CJK TC Medium')}
+@font-face {font-family: 'Noto Sans CJK TC Bold';font-style: normal;font-weight: 700;src: local('Noto Sans CJK TC Bold')}
+/* Mobile Device font setting */
+@font-face {font-family: 'LiHei Pro'; src: local('LiHei Pro');}  /* osx 10.6 以前 */
+@font-face {font-family: 'Heiti TC'; src: local('Heiti TC');} /* OS X / OS  */
+@font-face {font-family: 'Droid Sans'; src: local('Droid Sans');} /* Android 英文可轉中文  */
+@font-face {font-family: 'Droid Sans Fallback'; src: local('Droid Sans Fallback');} /* Android 中文  */
+@font-face {font-family: 'Microsoft JhengHei UI'; src: local('Microsoft JhengHei UI');} /* Windows 微軟正黑體  */
+@font-face {font-family: 'Microsoft JhengHei'; src: local('Microsoft JhengHei');} /* Windows 微軟正黑體  */
+@font-face {font-family: '微軟正黑體'; src: local('微軟正黑體');} /* Windows 微軟正黑體  */
+
+body {	font-family: "Noto Sans CJK TC Regular","Microsoft JhengHei UI","Microsoft JhengHei","微軟正黑體", sans-serif !important;	font-size: 16px; color: #5a5a5a; margin: 0; padding: 0;  }
+h1, h2, h3, h4, h5, h6{	font-family: "Noto Sans CJK TC Regular","Microsoft JhengHei UI","Microsoft JhengHei","微軟正黑體", sans-serif !important;	}
+h1.card-title {font-size: 1.2em !important;}
+p, li, tr, td, th {	font-family: "Noto Sans CJK TC Regular","Microsoft JhengHei UI","Microsoft JhengHei","微軟正黑體", sans-serif !important;	font-size: 16px;  }
+th{ font-weight: 400 !important;  }
+a {	font-family: "Noto Sans CJK TC Regular","Microsoft JhengHei UI","Microsoft JhengHei","微軟正黑體", sans-serif !important;	   }
+
+.wrap{ width:100%; }
+.numberlist{width:90%;position: relative; float:left; margin:0 5%; }
+.numberlist ol{ margin-left:15px; counter-reset: li;list-style: none;*list-style: decimal;	font: 15px 'trebuchet MS', 'lucida sans';padding: 0;margin-bottom: 4em;}
+.numberlist ol ol{margin: 0 0 0 2em;}
+.numberlist a{position: relative;display: block;padding: .4em .4em .4em 2em;*padding: .4em;margin: .5em 0;background: #FFF;
+				color: #444;text-decoration: none;-moz-border-radius: .3em;-webkit-border-radius: .3em;	border-radius: .3em;}
+.numberlist a:hover{background: #cbe7f8;text-decoration:none;	}
+.numberlist a:before{content: counter(li);	counter-increment: li;	position: absolute;	left: -1.3em;top: 50%;margin-top: -1.3em;
+				background: #87ceeb;height: 2em;width: 2em;line-height: 2em;border: .3em solid #fff;text-align: center;font-weight: bold;
+				-moz-border-radius: 2em;-webkit-border-radius: 2em;	border-radius: 2em;color:#FFF;}
+</style>
+<script src="vue.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="numberlist">
+        <h2>01.認識Vue</h2>
+        <ol>
+         <li><a href="01-01-create-dataBind.html" target="_blank">設定vue</a></li>
+         <li><a href="01-02-v-bind.html" target="_blank">v-bind</a></li>
+         <li><a href="01-03-method.html"  target="_blank">mMthods</a></li>
+         <li><a href="01-04-workingWithData.html" target="_blank">Methods呼叫data</a></li>
+         <li><a href="01-05-outputRawHTML.html"  target="_blank">v-html</a></li>
+        </ol>
+        <h2>02.Event 事件處理</h2>
+        <ol>
+         <li><a href="02-01-eventBinding.html" target="_blank">Event Binding</a></li>
+         <li><a href="02-02-eventMethod.html" target="_blank">Method: 加入function </a></li>
+         <li><a href="02-03-eventArgument.html"  target="_blank">Method: 傳入參數</a></li>
+         <li><a href="02-04-nativeEvent.html" target="_blank">原生事件</a></li>
+         <li><a href="02-05-eventModifier.html"  target="_blank">Event Modifier 修飾符</a></li>
+         <li><a href="02-06-v-once-locking.html"  target="_blank">v-once 鎖定</a></li>
+        </ol>
+        <h2>03.Vue.js 特色</h2>
+        <ol>
+         <li><a href="03-01-2WayBinding.html" target="_blank">雙向綁定 2-way Binding</a></li>
+         <li><a href="03-02-methodsDataBinding.html" target="_blank">Method 綁定 data </a></li>
+         <li><a href="03-03-computedProperty.html"  target="_blank">computed</a></li>
+         <li><a href="03-04-watchers.html" target="_blank">watch</a></li>
+        </ol>
+        <h2>04.動態讀取CSS Dynamic Styling</h2>
+        <ol>
+         <li><a href="04-01-dynamicStyling_01.html" target="_blank">動態讀取CSS-1</a></li>
+         <li><a href="04-01-dynamicStyling_02.html" target="_blank">動態讀取CSS-2</a></li>
+         <li><a href="04-02-computedProperty.html"  target="_blank">computed 讀取CSS</a></li>
+        </ol>
+        <h2>05.List Rendering 列表渲染</h2>
+        <ol>
+         <li><a href="05-01-startByEmptyArray.html" target="_blank">從空陣列array開始</a></li>
+         <li><a href="05-02-addGoals.html" target="_blank">加入目標 Add Goals</a></li>
+         <li><a href="05-03-v-if-v-else-v-else-if.html"  target="_blank">v-if, v-else, v-else-if</a></li>
+         <li><a href="05-04-v-show.html"  target="_blank">v-show</a></li>
+         <li><a href="05-05-renderingDataList.html"  target="_blank">v-for 資料列表渲染</a></li>
+         <li><a href="05-06-depperV-for.html"  target="_blank">深入了解 v-for</a></li>
+         <li><a href="05-07-removeList.html"  target="_blank">移出 List</a></li>
+         <li><a href="05-08-eventModifierOnList.html"  target="_blank">event modifier 應用</a></li>
+        </ol>
+    </div>
+    
+</div>	
+
+
+</body>
+</html>
