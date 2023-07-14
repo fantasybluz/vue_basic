@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="fonts.googleapis.com_css2_family=Jost_wght@400;700&display=swap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles_03.css" />
+    <script src="vue.js" defer></script>
+    <script src="app_03.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events" v-cloak>
+      <h2>Events in Action</h2>
+      <!--two way Binding 應用情境:自動帶值表單-->
+      <input type="text" v-bind:value="name" v-on:input="setName($event, 'Huang')">
+      <!--透過call method 將name assign emptuy-->
+      <button v-on:click="resetInput">Reset Input</button>
+      <br>v-model: <input type="text" v-model="name">
+      <p>姓名: {{ name }}</p>
+    </section>
+  </body>
+</html>

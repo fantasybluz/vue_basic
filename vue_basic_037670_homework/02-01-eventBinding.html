@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="fonts.googleapis.com_css2_family=Jost_wght@400;700&display=swap.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles_02.css" />
+    <script src="vue.js" defer></script>
+    <script src="app_02.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events" v-cloak>
+      <h2>Events in Action</h2>
+      <!--v-on 可直接加入event listener在html中-->
+      <button v-on:click="counter++">加 +</button>
+      <button v-on:click="counter--">減 -</button>
+      <p>Result: {{ counter }}</p>
+    </section>
+  </body>
+</html>
